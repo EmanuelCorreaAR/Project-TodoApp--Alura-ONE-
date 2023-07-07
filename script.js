@@ -1,4 +1,5 @@
-const btn = document.querySelector('[data-form-btn]')
+
+( ()=> {const btn = document.querySelector('[data-form-btn]')
 
 const createTask = (event)  => {
     event.preventDefault();
@@ -34,5 +35,8 @@ const checkComplete = () =>{
 
 const completeTask=(event)=>{
     const element = event.target;
-    element.classList.add('fas')
+    element.classList.toggle('fas');
+    element.classList.toggle('completeIcon')
+    element.classList.toggle('far');
 }
+})
